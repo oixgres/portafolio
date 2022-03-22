@@ -1,9 +1,13 @@
 import {React, useEffect} from "react";
 import Menu from "../components/Menu";
+import Presentation from "../components/Presentation";
 
 const Home = () => {
     return (
-        <Menu/>
+        <div>
+            <Menu/>
+            <Presentation/>
+        </div>
     );
 }
 

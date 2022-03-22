@@ -8,6 +8,10 @@ const MyMenu = ( props ) => {
         setActiveItem(name);
     };
 
+    const handleExternalClick = (e, {link}) => {
+        window.open(link, '_blank');
+    }
+
     return(
         <Segment inverted>
             <Menu inverted pointing secondary size="large">
@@ -17,19 +21,37 @@ const MyMenu = ( props ) => {
                     onClick={handleItemClick}
                 />
                 <Menu.Item
-                    name='messages'
-                    active={activeItem === 'messages'}
+                    name='works'
+                    active={activeItem === 'works'}
                     onClick={handleItemClick}
                 />
                 <Menu.Item
-                    name='friends'
-                    active={activeItem === 'friends'}
+                    name='about'
+                    active={activeItem === 'about  '}
                     onClick={handleItemClick}
                 />
 
                 <Menu.Menu position='right'>
-                    <Menu.Item active={activeItem === 'instagram'} onClick={handleItemClick}>
-                        <Icon name='instagram' size="large" />
+                    <Menu.Item
+                        active={activeItem === 'linkedin'}
+                        onClick={handleExternalClick}
+                        link='https://www.linkedin.com/in/segc7/'
+                    >
+                        <Icon name='linkedin' size="large"/>
+                    </Menu.Item>
+                    <Menu.Item
+                        active={activeItem === 'github'}
+                        onClick={handleExternalClick}
+                        link='https://github.com/oixgres'
+                    >
+                        <Icon name='github'size="large" />
+                    </Menu.Item>
+                    <Menu.Item
+                        active={activeItem === 'mail'}
+                        onClick={handleExternalClick}
+                        link='mailto:sergioegc07@gmail.com'
+                    >
+                        <Icon name='mail' size="large" />
                     </Menu.Item>
                 </Menu.Menu>
             </Menu>
