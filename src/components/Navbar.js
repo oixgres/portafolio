@@ -1,7 +1,7 @@
 import React from "react";
 import { Segment, Menu, Icon } from "semantic-ui-react";
 
-const MyMenu = ( props ) => {
+const Navbar = ( props ) => {
     const [activeItem, setActiveItem] = React.useState("home");
     
     const handleItemClick = (e, { name }) => {
@@ -59,4 +59,4 @@ const MyMenu = ( props ) => {
     );
 }
 
-export default MyMenu;
+export default Navbar;

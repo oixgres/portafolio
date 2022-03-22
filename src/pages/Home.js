@@ -1,11 +1,11 @@
 import {React, useEffect} from "react";
-import Menu from "../components/Menu";
+import Navbar from "../components/Navbar";
 import Presentation from "../components/Presentation";
 
 const Home = () => {
     return (
         <div>
-            <Menu/>
+            <Navbar/>
             <Presentation/>
         </div>
     );
