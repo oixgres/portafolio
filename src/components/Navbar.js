@@ -8,8 +8,8 @@ const Navbar = ( props ) => {
         setActiveItem(name);
     };
 
-    const handleExternalClick = (e, {link}) => {
-        window.open(link, '_blank');
+    const handleExternalClick = (e, {name}) => {
+        window.open(name, '_blank');
     }
 
     return(
@@ -35,21 +35,21 @@ const Navbar = ( props ) => {
                     <Menu.Item
                         active={activeItem === 'linkedin'}
                         onClick={handleExternalClick}
-                        link='https://www.linkedin.com/in/segc7/'
+                        name ='https://www.linkedin.com/in/segc7'
                     >
                         <Icon name='linkedin' size="large"/>
                     </Menu.Item>
                     <Menu.Item
                         active={activeItem === 'github'}
                         onClick={handleExternalClick}
-                        link='https://github.com/oixgres'
+                        name ='https://github.com/oixgres'
                     >
                         <Icon name='github'size="large" />
                     </Menu.Item>
                     <Menu.Item
                         active={activeItem === 'mail'}
                         onClick={handleExternalClick}
-                        link='mailto:sergioegc07@gmail.com'
+                        name ='mailto:sergioegc07@gmail.com'
                     >
                         <Icon name='mail' size="large" />
                     </Menu.Item>
