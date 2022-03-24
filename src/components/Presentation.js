@@ -2,34 +2,35 @@ import React from "react";
 import Header from "./Header";
 import { Grid } from "semantic-ui-react";
 import { motion } from "framer-motion";
+import './Presentation.css';
 
 const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 1,
-      }
+        opacity: 1,
+        scale: 1,
+        transition: {
+            delayChildren: 0.3,
+            staggerChildren: 0.3,
+        }
     }
-  };
-  
-  const item = {
-    hidden: { y: 100, opacity: 0 },
+};
+
+const item = {
+    hidden: { y: 50, opacity: 0 },
     visible: {
-      y: 0,
-      opacity: 1
+    y: 0,
+    opacity: 1
     }
-  };
+};
 const Presentation = () => {
     return (
-        <Grid columns={2} padded>
+        <Grid columns={2} stackable doubling padded>
             <Grid.Row>
-                <Grid.Column mobile={16} computer={8}>
+                <Grid.Column>
                     <Header
                         name='Sergio Enrique'
-                        size='7em'
+                        size='7rem'
                         color='#fff'
                         position='left '
                     />
@@ -40,21 +41,24 @@ const Presentation = () => {
                         position='left '
                     /> 
                 </Grid.Column>
-                <Grid.Column mobile={16} computer={8}>
-                    {/* <img src="images/test-square.png"></img> */}
-                     <motion.ul
-                        initial='hidden'
-                        animate='visible'
-                        variants={container}
-                     >
-                        <motion.img
-                            src='images/test-square.png'
-                            width={'50%'}
-                            height={'50%'}
-                            variants={item}
+                <Grid.Column>
+                    <Grid centered>
+                        <motion.ul
+                            initial='hidden'
+                            animate='visible'
+                            variants={container}
+                            className='container'
                         >
-                        </motion.img>
-                     </motion.ul>
+                        {['c','python','aws','react'].map((logo, index) => (
+                            <motion.img
+                                key={index}
+                                variants={item}
+                                src={`/images/icons/${logo}.png`}
+                                width='100%'                            
+                            />
+                        ))}
+                        </motion.ul>
+                    </Grid>
                 </Grid.Column>
             </Grid.Row>
         </Grid>
