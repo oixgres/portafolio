@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import { Grid } from "semantic-ui-react";
+import { Grid, Progress } from "semantic-ui-react";
 import { motion } from "framer-motion";
 import './Presentation.css';
 
@@ -37,12 +37,18 @@ const Presentation = () => {
                     <Header
                         name='Guerra Cervantes'
                         size='7em'
-                        color='#798086'
+                        color={'#fff'}
+                        // color='#798086'
                         position='left '
                     /> 
+                    <Progress percent={25} color='blue' size="small"/>
+                    <p style={{'color':'white', 'fontStyle':'italic', 'textAlign':'left', 'fontSize':'1.5em'}}>
+                        “Truth can only be found in one place: the code.” <br/>
+                        ― Robert C. Martin, Clean Code: A Handbook of Agile Software
+                    </p>
                 </Grid.Column>
                 <Grid.Column>
-                    <Grid centered>
+                    <Grid centered padded>
                         <motion.ul
                             initial='hidden'
                             animate='visible'

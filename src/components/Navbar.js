@@ -1,8 +1,8 @@
 import React from "react";
 import { Segment, Menu, Icon } from "semantic-ui-react";
 
-const Navbar = ( props ) => {
-    const [activeItem, setActiveItem] = React.useState("home");
+const Navbar = ( {location} ) => {
+    const [activeItem, setActiveItem] = React.useState(location);
     
     const handleItemClick = (e, { name }) => {
         setActiveItem(name);
@@ -21,13 +21,18 @@ const Navbar = ( props ) => {
                     onClick={handleItemClick}
                 />
                 <Menu.Item
-                    name='works'
-                    active={activeItem === 'works'}
+                    name='about'
+                    active={activeItem === 'about'}
                     onClick={handleItemClick}
                 />
                 <Menu.Item
-                    name='about'
-                    active={activeItem === 'about  '}
+                    name='work'
+                    active={activeItem === 'work'}
+                    onClick={handleItemClick}
+                />
+                <Menu.Item
+                    name='skills'
+                    active={activeItem === 'skills'}
                     onClick={handleItemClick}
                 />
 

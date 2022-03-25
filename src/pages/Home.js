@@ -5,7 +5,7 @@ import Presentation from "../components/Presentation";
 const Home = () => {
     return (
         <div>
-            <Navbar/>
+            <Navbar location={'home'}/>
             <Presentation/>
         </div>
     );
