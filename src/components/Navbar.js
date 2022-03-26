@@ -1,11 +1,13 @@
 import React from "react";
 import { Segment, Menu, Icon } from "semantic-ui-react";
+import {useNavigate} from 'react-router-dom';
 
 const Navbar = ( {location} ) => {
+    const navigation = useNavigate();
     const [activeItem, setActiveItem] = React.useState(location);
     
     const handleItemClick = (e, { name }) => {
-        setActiveItem(name);
+        name=='home' ? navigation('/') : navigation(`/${name}`);
     };
 
     const handleExternalClick = (e, {name}) => {
@@ -22,12 +24,12 @@ const Navbar = ( {location} ) => {
                 />
                 <Menu.Item
                     name='about'
-                    active={activeItem === 'about'}
+                    // active={activeItem === 'about'}
                     onClick={handleItemClick}
                 />
                 <Menu.Item
                     name='work'
-                    active={activeItem === 'work'}
+                    // active={activeItem === 'work'}
                     onClick={handleItemClick}
                 />
                 <Menu.Item

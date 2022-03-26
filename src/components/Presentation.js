@@ -59,7 +59,7 @@ const Presentation = () => {
                             <motion.img
                                 key={index}
                                 variants={item}
-                                src={`/images/icons/${logo}.png`}
+                                src={`/images/main-icons/${logo}.png`}
                                 width='100%'                            
                             />
                         ))}
