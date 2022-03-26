@@ -24,12 +24,12 @@ const Navbar = ( {location} ) => {
                 />
                 <Menu.Item
                     name='about'
-                    // active={activeItem === 'about'}
+                    active={activeItem === 'about'}
                     onClick={handleItemClick}
                 />
                 <Menu.Item
                     name='work'
-                    // active={activeItem === 'work'}
+                    active={activeItem === 'work'}
                     onClick={handleItemClick}
                 />
                 <Menu.Item
