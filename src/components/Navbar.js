@@ -4,10 +4,11 @@ import {useNavigate} from 'react-router-dom';
 
 const Navbar = ( {location} ) => {
     const navigation = useNavigate();
-    const [activeItem, setActiveItem] = React.useState(location);
+    // const [activeItem, setActiveItem] = React.useState(location);
+    const activeItem = location;
     
     const handleItemClick = (e, { name }) => {
-        name=='home' ? navigation('/') : navigation(`/${name}`);
+        name==='home' ? navigation('/') : navigation(`/${name}`);
     };
 
     const handleExternalClick = (e, {name}) => {
