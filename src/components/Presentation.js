@@ -38,7 +38,6 @@ const Presentation = () => {
                         name='Guerra Cervantes'
                         size='7em'
                         color={'#fff'}
-                        // color='#798086'
                         position='left '
                     /> 
                     <Progress percent={25} color='blue' size="small"/>

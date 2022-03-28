@@ -1,0 +1,12 @@
+.container-skills {
+    width: 90%;
+    display: grid;
+    overflow: hidden;
+    margin: 0;
+    list-style: none;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+    border-radius: 50px;
+}
