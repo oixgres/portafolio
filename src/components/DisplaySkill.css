@@ -6,7 +6,9 @@
     list-style: none;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 15px;
-    padding: 15px;
-    border-radius: 50px;
+    vertical-align: middle;
+}
+
+.container-skill{
+    min-height: 150px;
 }

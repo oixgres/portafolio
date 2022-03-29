@@ -1,18 +1,18 @@
-import { Grid } from 'semantic-ui-react';
+import { Grid, Header, Card, Image, ImageGroup, Reveal} from 'semantic-ui-react';
 import './DisplaySkill.css';
 
 const DisplaySkill = ({folder, images}) => {
     return(
         <Grid centered padded>
-            <div className='container-skills'>
+            <Image.Group size='small'>
                 {images.map((image) => (
-                    <img
+                    <Image
                         src={`/images/${folder}/${image}.png`}
                         alt={image}
-                        width='100%'
+                        bordered
                     />
-                    ))}
-            </div>
+                ))}
+            </Image.Group>
         </Grid>
     );
 }

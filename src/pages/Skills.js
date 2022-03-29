@@ -6,7 +6,7 @@ const displayItems = [
     {
         title: 'Soft Skills',
         folder: 'pl-icons',
-        images: ['c','cpp','java','js','python','php']
+        images: ['c','cpp','java','js','php','php']
     },
     {
         title: 'Programming Languages',
