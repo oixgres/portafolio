@@ -1,11 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 import {motion } from "framer-motion"
 import { Segment, Accordion, Icon } from "semantic-ui-react";
 
 
-const Skill = ({title, index, delay, animateX, children}) => {
-    const [activeIndex, setactiveIndex] = useState(-1);
-
+const Skill = ({title, index, delay, animateX, activeIndex, setactiveIndex, children}) => {
     const handleClick = (e, titleProps) => {
         const { index } = titleProps;
         const newIndex = activeIndex === index ? -1 : index;
