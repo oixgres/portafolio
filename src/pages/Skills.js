@@ -7,7 +7,7 @@ const displayItems = [
     {
         title: 'Soft Skills',
         folder: 'pl-icons',
-        images: ['c','cpp','java','scala','php','c']
+        images: ['c', 'cpp','java','scala','bash','cs', 'go']
     },
     {
         title: 'Programming Languages',
@@ -20,9 +20,8 @@ const displayItems = [
         images: ['c','cpp','java','js','python','php']
     },
     {
-        title: 'Tehnologies',
+        title: 'Technologies',
         folder: 'pl-icons',
-        images: ['c','cpp','java','js','python','php']
     },
 ]
 const Skills = () => {
@@ -43,7 +42,7 @@ const Skills = () => {
                     <DisplaySkill
                         folder={item.folder}
                         images={item.images}
-                        index={index}
+                        sectionIndex={index}
                         activeIndex={activeIndex}
                     />
                 </Skill>
