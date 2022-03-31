@@ -1,0 +1,70 @@
+[
+    {
+        "title": "Soft Skills",
+        "folder": "pl-icons",
+        "section": [
+            {
+                "title": "",
+                "images": ["c","cpp","java","js","python","php"]
+            }
+        ]
+    },
+    {
+        "title": "Programming Languages",
+        "folder": "pl-icons",
+        "section": [
+            {
+                "title": "For Big Data",
+                "images": ["python","java","scala","bash"]
+            },
+            {
+                "title": "For Applications",
+                "images": ["c","cpp","cs","prolog"]   
+            },
+            {
+                "title": "For Web Development",
+                "images": ["html","css","js","php"]
+            },
+            {
+                "title": "For Data Base Management",
+                "images": ["mysql","postgres"]
+            }
+        ]
+    },
+    {
+        "title": "Frameworks",
+        "folder": "framework-icons",
+        "section": [
+            {
+                "title": "For Big Data",
+                "images": ["Spark","Kafka","selenium"]
+            },
+            {
+                "title": "For Web Development",
+                "images": ["node","react", "react-native","angular", "jquery"]
+            },
+            {
+                "title": "For Web Development Design", 
+                "images": ["bootstrap","semantic-ui","material-ui", "angular-material"] 
+            }
+        ]
+    },
+    {
+        "title": "Technologies",
+        "folder": "tech-icons",
+        "section": [
+            {
+                "title":"For Big Data",
+                "images":["aws", "airflow", "docker", "jenkins"]
+            },
+            {
+                "title": "Operating Systems",
+                "images": ["linux", "windows", "mac"]
+            },
+            {
+                "title": "IDEs & Text Editors",
+                "images": ["vs-code", "intellij-idea", "data-grip", "android-studio", "atom", "eclipse"]
+            }
+        ]
+    }
+]

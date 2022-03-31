@@ -3,30 +3,10 @@ import Navbar from "../components/Navbar";
 import Skill from "../components/Skill";
 import { useState } from "react";
 
-const displayItems = [
-    {
-        title: 'Soft Skills',
-        folder: 'pl-icons',
-        images: ['c', 'cpp','java','scala','bash','cs', 'go']
-    },
-    {
-        title: 'Programming Languages',
-        folder: 'pl-icons',
-        images: ['c','cpp','java','js','python','php']
-    },
-    {
-        title: 'Frameworks',
-        folder: 'pl-icons',
-        images: ['c','cpp','java','js','python','php']
-    },
-    {
-        title: 'Technologies',
-        folder: 'pl-icons',
-    },
-]
+import displayItems  from "../json/skills.json";
+
 const Skills = () => {
     const [activeIndex, setactiveIndex] = useState(-1);
-
     return (
         <div>
             <Navbar location={'skills'}/>
@@ -39,12 +19,18 @@ const Skills = () => {
                     activeIndex={activeIndex}
                     setactiveIndex={setactiveIndex}
                 >
-                    <DisplaySkill
-                        folder={item.folder}
-                        images={item.images}
-                        sectionIndex={index}
-                        activeIndex={activeIndex}
-                    />
+                    {item.section.map((section) => (
+                        <div>
+                            <h2>{section.title}</h2>
+                            <DisplaySkill
+                                folder={item.folder}
+                                images={section.images}
+                                sectionIndex={index}
+                                activeIndex={activeIndex}
+                            />
+                        </div>
+                    ))}
+
                 </Skill>
             ))}
         </div>
