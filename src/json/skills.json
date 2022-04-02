@@ -41,10 +41,10 @@
             },
             {
                 "title": "For Web Development",
-                "images": ["node","react", "react-native","angular", "jquery"]
+                "images": ["node","react","angular", "jquery"]
             },
             {
-                "title": "For Web Development Design", 
+                "title": "For Design", 
                 "images": ["bootstrap","semantic-ui","material-ui", "angular-material"] 
             }
         ]
@@ -58,12 +58,16 @@
                 "images":["aws", "airflow", "docker", "jenkins"]
             },
             {
-                "title": "Operating Systems",
-                "images": ["linux", "windows", "mac"]
+                "title":"Git Technologies",
+                "images":["git", "github", "gitkraken"]
             },
             {
                 "title": "IDEs & Text Editors",
-                "images": ["vs-code", "intellij-idea", "data-grip", "android-studio", "atom", "eclipse"]
+                "images": ["vs-code", "intellij", "datagrip", "unity", "android-studio", "atom", "eclipse"]
+            },
+            {
+                "title": "Operating Systems",
+                "images": ["linux", "macOs", "windows"]
             }
         ]
     }
