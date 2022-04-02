@@ -3,6 +3,11 @@ import { Grid, Image} from 'semantic-ui-react';
 import { motion } from 'framer-motion';
 
 const DisplaySkill = ({folder, images, sectionIndex, activeIndex }) => {
+    const handleDelay = () =>{
+        
+    }
+    
+    
     return(
         <Grid padded>
             <Grid.Row centered verticalAlign='middle'>
@@ -17,15 +22,18 @@ const DisplaySkill = ({folder, images, sectionIndex, activeIndex }) => {
                                     x: [-30*index, -15*index, 0]
                                 }:
                                 {opacity:0}} 
-                                transition={
-                                    activeIndex === -1 ?
-                                    {opacity: {duration: 0}} :
-                                    {delay:0.1*(index+1), duration: 0.3}}
+                            transition={
+                                activeIndex === -1 ?
+                                {opacity: {duration: 0}} :
+                                {delay:0.1*(index+1), duration: 0.3}}
+                            // whileHover={{scale: 1.1, transitionDelay: 0}}
                         >
-                            <Image
-                                src={`/images/${folder}/${image}.png`}
-                                alt={image}
+                            <motion.div whileHover={{scale:1.2}}>
+                                <Image
+                                    src={`/images/${folder}/${image}.png`}
+                                    alt={image}
                                 />
+                            </motion.div>
                         </motion.div>
                     </Grid.Column>
                 ))}
