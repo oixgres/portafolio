@@ -1,40 +1,19 @@
-import './DisplaySkill.css';
-import { Grid, Image} from 'semantic-ui-react';
-import { motion } from 'framer-motion';
+import { Grid } from 'semantic-ui-react';
+import InteractiveImage from './InteractiveImage';
 
-const DisplaySkill = ({folder, images, sectionIndex, activeIndex }) => {
-    const handleDelay = () =>{
-        
-    }
-    
-    
+const DisplaySkill = ({folder, images, sectionIndex, activeIndex }) => {    
     return(
         <Grid padded>
             <Grid.Row centered verticalAlign='middle'>
                 {images.map((image, index=1) => (
                     <Grid.Column mobile={6} tablet={3} computer={2}>
-                        <motion.div
-                            animate={
-                                activeIndex === sectionIndex ?
-                                {
-                                    opacity: 1, 
-                                    y:[30, -30, 0],
-                                    x: [-30*index, -15*index, 0]
-                                }:
-                                {opacity:0}} 
-                            transition={
-                                activeIndex === -1 ?
-                                {opacity: {duration: 0}} :
-                                {delay:0.1*(index+1), duration: 0.3}}
-                            // whileHover={{scale: 1.1, transitionDelay: 0}}
-                        >
-                            <motion.div whileHover={{scale:1.2}}>
-                                <Image
-                                    src={`/images/${folder}/${image}.png`}
-                                    alt={image}
-                                />
-                            </motion.div>
-                        </motion.div>
+                        <InteractiveImage
+                            index={index}
+                            activeIndex={activeIndex}
+                            sectionIndex={sectionIndex}
+                            image={image}
+                            folder={folder}
+                        />
                     </Grid.Column>
                 ))}
             </Grid.Row>
