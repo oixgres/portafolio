@@ -1,0 +1,23 @@
+[
+    {
+        "name": "BIG DATA DEVOPS",
+        "workplace": "Samsung SRT",
+        "date": "November 21 2021 - Today",
+        "description": "Propose Support,maintain and manage DevOps responsibilities. Frequent infrastructure maintenance upgrades. System monitoring, Ops support and alert responding.",
+        "skills":[
+            "aws",
+            "airflow",
+            "docker",
+            "jenkins",
+            "git",
+            "github",
+            "python",
+            "bash",
+            "scala",
+            "java",
+            "spark",
+            "kafka"
+        ],
+        "image": "samsung-devops"
+    }
+]

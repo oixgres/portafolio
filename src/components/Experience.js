@@ -27,7 +27,8 @@ const Experience = ({job, workplace, date, skills}) => {
             {skills.map(
                 skill=>
                 <p style={{"fontSize":"1.4em"}}>
-                    <l style={{color:getRandomColor()}}> &#9632; </l> {skill} &nbsp;
+                    <l style={{color:getRandomColor()}}> &#9632; </l> 
+                    {skill} &emsp;
                 </p>
             )}
             </Grid.Row></Grid>
