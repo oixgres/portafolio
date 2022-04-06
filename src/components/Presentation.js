@@ -33,12 +33,14 @@ const Presentation = () => {
                         size='7rem'
                         color='#fff'
                         position='left '
+                        padding='0 0.1rem 0 0.1rem'
                     />
                     <Header
                         name='Guerra Cervantes'
                         size='7em'
                         color={'#fff'}
                         position='left '
+                        padding='0 0.1rem 0 0.1rem'                        
                     /> 
                     <Progress percent={25} color='blue' size="small"/>
                     <p style={{'color':'white', 'fontStyle':'italic', 'textAlign':'left', 'fontSize':'1.5em'}}>

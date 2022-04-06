@@ -1,5 +1,6 @@
 import { Grid, Image} from "semantic-ui-react";
 import Experience from "./Experience";
+import { motion } from "framer-motion";
 
 const Job = ({job, workplace,date,image,skills}) =>{
     return(

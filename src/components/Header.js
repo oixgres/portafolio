@@ -1,11 +1,12 @@
-const Header = ({name, size, color, position}) => {
+const Header = ({name, size, color, position, padding}) => {
     return (
         <div>
             <h1 style={{
-                'fontSize':'7em',
+                'fontSize':size,
                 'color':color,
                 'textAlign':position,
-                'fontFamily':'coolvetica'
+                'fontFamily':'coolvetica',
+                'padding': padding
             }}>{name}</h1>
         </div>
     );
