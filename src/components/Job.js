@@ -1,10 +1,9 @@
 import { Grid, Image} from "semantic-ui-react";
 import Experience from "./Experience";
-import { motion } from "framer-motion";
 
 const Job = ({job, workplace,date,image,skills}) =>{
     return(
-        <Grid columns={3}><Grid.Row>
+        <Grid><Grid.Row>
             <Grid.Column width={9} stretched>
                 <Experience
                     job={job}
