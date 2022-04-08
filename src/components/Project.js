@@ -1,7 +1,7 @@
 import { Grid, Image } from "semantic-ui-react";
 import Experience from "./Experience";
 
-const Project = ({ project, date, image, skills }) => {
+const Project = ({ project, date, image, skills, description }) => {
     return (
         <Grid><Grid.Row>
             <Grid.Column width={7} stretched>
@@ -13,6 +13,7 @@ const Project = ({ project, date, image, skills }) => {
                     // workplace={"Samsung"}
                     date={date}
                     skills={skills}
+                    description={description}
                 />
             </Grid.Column>
         </Grid.Row></Grid>

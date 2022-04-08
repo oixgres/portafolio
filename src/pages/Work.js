@@ -18,7 +18,7 @@ const Work = () => {
                 color={'#fff'}
                 position='left'
                 padding='0 0.25em 0 0.25em'
-                />
+            />
             {jobs.map((job) => (
                 <motion.div
                 initial={{ opacity: 0, y: 100 }}
@@ -31,9 +31,17 @@ const Work = () => {
                         date={job.date}
                         image={job.image}
                         skills={job.skills}
+                        description={job.description}
                     />
                 </motion.div>
             ))}
+            <Header
+                name={`Projects`}
+                size='4em'
+                color={'#fff'}
+                position='left'
+                padding='0 0.25em 0 0.25em'
+            />
             {projects.map((project) => (
                 <motion.div
                 initial={{ opacity: 0, y: 100 }}
@@ -46,6 +54,7 @@ const Work = () => {
                         date={project.date}
                         image={project.image}
                         skills={project.skills}
+                        description={project.description}
                     />
                 </motion.div>
             ))}
