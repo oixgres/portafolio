@@ -3,7 +3,7 @@ import Experience from "./Experience";
 
 const Job = ({job, workplace,date,image,skills,description}) =>{
     return(
-        <Grid><Grid.Row>
+        <Grid padded><Grid.Row>
             <Grid.Column width={9} stretched>
                 <Experience
                     job={job}

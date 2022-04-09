@@ -42,6 +42,7 @@ const Work = () => {
                 position='left'
                 padding='0 0.25em 0 0.25em'
             />
+            {/* PROJECTS */}
             {projects.map((project) => (
                 <motion.div
                 initial={{ opacity: 0, y: 100 }}
@@ -52,9 +53,10 @@ const Work = () => {
                         project={project.name}
                         workplace={project.workplace}
                         date={project.date}
-                        image={project.image}
+                        images={project.images}
                         skills={project.skills}
                         description={project.description}
+                        url={project.url}
                     />
                 </motion.div>
             ))}
