@@ -12,6 +12,7 @@ const Work = () => {
     return(
         <div>
             <Navbar location={'work'}/>
+            {/* Jobs */}
             <Header
                 name={`Job Experience`}
                 size='4em'
@@ -35,6 +36,7 @@ const Work = () => {
                     />
                 </motion.div>
             ))}
+            {/* PROJECTS */}
             <Header
                 name={`Projects`}
                 size='4em'
@@ -42,7 +44,6 @@ const Work = () => {
                 position='left'
                 padding='0 0.25em 0 0.25em'
             />
-            {/* PROJECTS */}
             {projects.map((project) => (
                 <motion.div
                 initial={{ opacity: 0, y: 100 }}
@@ -53,7 +54,7 @@ const Work = () => {
                         project={project.name}
                         workplace={project.workplace}
                         date={project.date}
-                        images={project.images}
+                        image={project.image}
                         skills={project.skills}
                         description={project.description}
                         url={project.url}

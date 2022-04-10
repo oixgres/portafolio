@@ -1,14 +1,11 @@
 import { Grid, Image } from "semantic-ui-react";
 import Experience from "./Experience";
 
-const Project = ({ project, date, images, skills, description, url }) => {
+const Project = ({ project, date, image, skills, description, url }) => {
     return (
         <Grid padded><Grid.Row>
             <Grid.Column width={7} stretched >
-                {/* <Image src={`/images/projects/samsung-devops.png`}/> */}
-                {images.map(image => (
-                    <Image src={`/images/projects/${image}.png`} />
-                ))}
+                <Image src={`/images/projects/${image}.png`} />
             </Grid.Column>
             <Grid.Column width={9} stretched>
                 <Experience

@@ -4,12 +4,12 @@
         "date":"January 2021 - July 2021",
         "description":"Design, develop and maintain a data extractor for social media groups. Design, develop and maintain the database. The information that the scanner can extract is posts, views, names, comments, responses, reactions and people who shared the post",
         "skills":[
-            "Python",
-            "Selenium"
+            "python",
+            "selenium",
+            "php",
+            "mysql"
         ],
-        "images":[
-            ""
-        ],
+        "image":"scrapper",
         "url":"",
         "repo":"https://github.com/oixgres/ScrapingFacebookInfo"
     },
@@ -25,9 +25,7 @@
             "mysql",
             "jquery"
         ],
-        "images":[
-            "hcarbono/main"
-        ],
+        "image": "hcarbono",
         "url":"hcarbono.com",
         "repo":"github.com/oixgres/HCarbono"
     }

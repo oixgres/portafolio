@@ -33,11 +33,15 @@ const Experience = ({job, workplace, date, skills, description, url}) => {
                 )}
 
                 </Grid.Row>
-                {url ? <Grid.Row>
+                {
+                url ? 
+                <Grid.Row>
                     <Grid.Column>
-                    <h3><a href={`https://${url}`}>{url}</a></h3>
+                        <h3><a href={`https://${url}`}>{url}</a></h3>
                     </Grid.Column>
-                    </Grid.Row> : null}
+                </Grid.Row> : 
+                null
+                }
             </Grid>
         </Segment>
     )
