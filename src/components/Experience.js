@@ -1,19 +1,29 @@
 import './Experience.css'
-import { Segment, Grid, Divider, GridColumn } from "semantic-ui-react";
+import { Segment, Grid, Divider, Icon, Menu } from "semantic-ui-react";
 
 // Experience component is a section where Jobs and Project are explained
-const Experience = ({job, workplace, date, skills, description, url}) => {
+const Experience = ({job, workplace, date, skills, description, url, repo}) => {
     const randomNumber = n => Math.floor(Math.random() * n);
 
     const getRandomColor = () => {
         return `rgb(${randomNumber(255)},${randomNumber(255)},${randomNumber(255)})`;
     }
 
-    const handleExternalClick = (e, {url}) => window.open(url, '_blank');
+    const handleExternalClick = (e, {url}) => {window.open(url, '_blank')};
 
     return(
         <Segment inverted padded>
-            <h1>{job}</h1>
+            <h1>
+                {job} 
+                {
+                repo?
+                <Menu.Item onClick={handleExternalClick} url={repo}>
+                    <Icon name='github'/>
+                </Menu.Item>
+                :
+                null    
+                }
+            </h1>
             <Divider/>
             <h2 style={{color:'gray'}}>{workplace}
             <h2 className="exp-date">{date}
@@ -36,7 +46,7 @@ const Experience = ({job, workplace, date, skills, description, url}) => {
                 {
                 url ? 
                 <Grid.Row>
-                    <Grid.Column>
+                    <Grid.Column>   
                         <h3><a href={`https://${url}`}>{url}</a></h3>
                     </Grid.Column>
                 </Grid.Row> : 

@@ -58,6 +58,7 @@ const Work = () => {
                         skills={project.skills}
                         description={project.description}
                         url={project.url}
+                        repo={project.repo}
                     />
                 </motion.div>
             ))}
