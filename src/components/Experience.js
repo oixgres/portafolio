@@ -41,7 +41,6 @@ const Experience = ({job, workplace, date, skills, description, url, repo}) => {
                         {skill} &emsp;
                     </p>
                 )}
-
                 </Grid.Row>
                 {
                 url ? 
