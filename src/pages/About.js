@@ -1,5 +1,5 @@
-import { Grid } from "semantic-ui-react";
-import { NormalCard, ProfileCard } from "../components/collections/Cards";
+import { Grid, Segment } from "semantic-ui-react";
+import {NormalCard,ProfileCard,NormalCardCollection} from "../components/collections/Cards";
 import Navbar from "../components/Navbar";
 
 const About = () => {
@@ -19,11 +19,16 @@ const About = () => {
                             title="Hi, I'm Sergio"
                             description={description}
                         />
+                        <NormalCardCollection
+                            titles={['What do I like?', 'What do I do?', 'My Favorite Food']}
+                            descriptions={['a', 'b']}
+                        />
                     </Grid.Column>
                     <Grid.Column width={5}>
                         <ProfileCard
                             title='Sergio Enrique Guerra Cervantes'
                             image='images/about/profile.jpg'
+                            description='Computer Engineer'
                         />
                     </Grid.Column>
                 </Grid.Row>
