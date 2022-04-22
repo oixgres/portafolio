@@ -1,0 +1,19 @@
+{
+    "salutation":"Hi, I'm Sergio",
+    "description": "I am a Computer Engineer, focused on Development Operations (DevOps).  I am a hardworking individual with a strong desire to learn new technologies and improve my skills, always striving to develop the best product. \n I'm certified Amazon Web Services (AWS) and CI/CD pipelines. Front-end and back-end.",
+    "facts":[
+        {
+            "title":"What do I like?",
+            "description":"I love to learn, day to day I take every chance to learn new things from my job, my teamates, courses and books."
+        },
+        {
+            "title":"What do I do?",
+            "description":"I create solutions. I can develop, test and deploy applications. I can also automate and create CI/CD pipelines."
+        },
+        {
+            "title":"My Interests",
+            "description":"I'm actually following the DevOps path, but I'm also interested in other areas, like mobile development, IoT, and game development."
+        }
+
+    ]
+}

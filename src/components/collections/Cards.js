@@ -1,19 +1,22 @@
 import { Header, Segment, Image, Grid } from "semantic-ui-react"
+import { motion } from "framer-motion";
 import './Cards.css'
 
 const NormalCard = props => {
-    const {title, description} = props;
+    const {title, description, animation} = props;
 
     return(
-        <Segment inverted padded raised>
-            <Header as="h1">{title}</Header>
-            <p className="p-normal-card">{description}</p>
-        </Segment>
+        <motion.div animate={animation}>
+            <Segment inverted padded raised>
+                <Header as="h1">{title}</Header>
+                <p className="p-normal-card">{description}</p>
+            </Segment>
+        </motion.div>
     )
 }
 
 const ProfileCard = props => {
-    const {title, image, description} = props;
+    const {title, image, description, animation} = props;
 
     return(
         <Segment inverted padded textAlign="center">
@@ -25,21 +28,24 @@ const ProfileCard = props => {
 }
 
 const NormalCardCollection = props => {
-    const {titles, descriptions} = props;
+    const {json, animation} = props;
 
     return(
-        <Grid>
-            <Grid.Row columns={titles.length}>
-                {titles.map((title, i) =>
-                    <Grid.Column>
+        <motion.div animate={animation}>
+            <Grid>
+                <Grid.Row columns={json.length}>
+                {json.map(j =>
+                    <Grid.Column stretched>
                         <NormalCard
-                            title={title}
-                            description={descriptions[i]}
-                        />
+                            title={j.title}
+                            description={j.description}
+                            animation={animation}
+                            />
                     </Grid.Column> 
                 )}
-            </Grid.Row>
-        </Grid>
+                </Grid.Row>
+            </Grid>
+        </motion.div>
     )
 
 }

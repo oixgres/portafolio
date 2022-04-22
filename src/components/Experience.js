@@ -2,7 +2,8 @@ import './Experience.css'
 import { Segment, Grid, Divider, Icon, Menu } from "semantic-ui-react";
 
 // Experience component is a section where Jobs and Project are explained
-const Experience = ({job, workplace, date, skills, description, url, repo}) => {
+const Experience = props => {
+    const {job, workplace, date, skills, description, url, repo} = props;
     const randomNumber = n => Math.floor(Math.random() * n);
 
     const getRandomColor = () => {
