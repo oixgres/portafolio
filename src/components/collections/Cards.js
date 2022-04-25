@@ -3,10 +3,13 @@ import { motion } from "framer-motion";
 import './Cards.css'
 
 const NormalCard = props => {
-    const {title, description, animation} = props;
+    const {title, description, animation, delay} = props;
 
     return(
-        <motion.div animate={animation}>
+        <motion.div
+            animate={animation}
+            transition={delay?{delay: delay*0.3}:{delay:0.1}}
+        >
             <Segment inverted padded raised>
                 <Header as="h1">{title}</Header>
                 <p className="p-normal-card">{description}</p>
@@ -31,21 +34,22 @@ const NormalCardCollection = props => {
     const {json, animation} = props;
 
     return(
-        <motion.div animate={animation}>
+        <motion.li animate={animation}>
             <Grid>
                 <Grid.Row columns={json.length}>
-                {json.map(j =>
+                {json.map((j, index) =>
                     <Grid.Column stretched>
                         <NormalCard
                             title={j.title}
                             description={j.description}
                             animation={animation}
+                            delay={index+1}
                             />
                     </Grid.Column> 
                 )}
                 </Grid.Row>
             </Grid>
-        </motion.div>
+        </motion.li>
     )
 
 }
