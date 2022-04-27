@@ -10,7 +10,7 @@ const NormalCard = props => {
             animate={animation}
             transition={delay?{delay: delay*0.3}:{delay:0.1}}
         >
-            <Segment inverted padded raised>
+            <Segment inverted padded>
                 <Header as="h1">{title}</Header>
                 <p className="p-normal-card">{description}</p>
             </Segment>
@@ -19,14 +19,16 @@ const NormalCard = props => {
 }
 
 const ProfileCard = props => {
-    const {title, image, description, animation} = props;
+    const {title, image, description, animation, delay} = props;
 
     return(
-        <Segment inverted padded textAlign="center">
-            <Image src={image} fluid centered/>
-            <Header as="h2">{title}</Header>
-            <Header as='h3'>{description}</Header>
-        </Segment>
+        <motion.div animate={animation} transition={{delay: delay}}>
+            <Segment inverted padded textAlign="center">
+                <Image src={image} fluid centered/>
+                <Header as="h2">{title}</Header>
+                <Header as='h3'>{description}</Header>
+            </Segment>
+        </motion.div>
     )
 }
 
@@ -38,13 +40,13 @@ const NormalCardCollection = props => {
             <Grid>
                 <Grid.Row columns={json.length}>
                 {json.map((j, index) =>
-                    <Grid.Column stretched>
+                    <Grid.Column stretched  >
                         <NormalCard
                             title={j.title}
                             description={j.description}
                             animation={animation}
                             delay={index+1}
-                            />
+                        />
                     </Grid.Column> 
                 )}
                 </Grid.Row>

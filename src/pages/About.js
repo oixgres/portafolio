@@ -5,12 +5,6 @@ import Navbar from "../components/Navbar";
 import about from "../json/about.json";
 
 const About = () => {
-    // const description = [
-    //     "I am a Computer Engineer, focused on Development Operations (DevOps).  I am a hardworking individual with a strong desire to learn new technologies and improve my skills, always striving to develop the best product.",
-    //     <br/>,
-    //     "I'm certified Amazon Web Services (AWS) and CI/CD pipelines. Front-end and back-end."
-    // ]
-
     return (
         <div>
             <Navbar location={'about'}/>
@@ -32,6 +26,8 @@ const About = () => {
                             title='Sergio Enrique Guerra Cervantes'
                             image='images/about/profile.jpg'
                             description='Computer Engineer'
+                            animation={{x:[100,0], y:[0,0], opacity:[0,1]}}
+                            delay={1.2}
                         />
                     </Grid.Column>
                 </Grid.Row>
