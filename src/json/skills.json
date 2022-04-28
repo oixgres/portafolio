@@ -1,11 +1,15 @@
 [
     {
         "title": "Soft Skills",
-        "folder": "pl-icons",
+        "folder": "soft-skills",
         "section": [
             {
                 "title": "",
-                "images": ["c","cpp","java","js","python","php"]
+                "images": ["adaptability", "teamwork", "willingness-to-learn","problem-solving"]
+            },
+            {
+                "title":"",
+                "images": ["time-management", "listening", "persistence", "patience"]
             }
         ]
     },

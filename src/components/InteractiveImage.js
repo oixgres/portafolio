@@ -24,7 +24,7 @@ const InteractiveImage=({index,activeIndex,sectionIndex,image,folder}) => {
                     style={{opacity:0.5}}
                     inverted
                 >
-                    <h2>{toCapitalize(image)}</h2>
+                    <h2>{toCapitalize(image.replace(/-/g," ",-1))}</h2>
                 </Popup>
             </motion.div>
         </motion.div>
