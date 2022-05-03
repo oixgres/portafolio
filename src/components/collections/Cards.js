@@ -37,8 +37,8 @@ const NormalCardCollection = props => {
 
     return(
         <motion.li animate={animation}>
-            <Grid>
-                <Grid.Row columns={json.length}>
+            <Grid columns={json.length} stackable>
+                <Grid.Row >
                 {json.map((j, index) =>
                     <Grid.Column stretched  >
                         <NormalCard

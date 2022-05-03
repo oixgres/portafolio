@@ -3,9 +3,9 @@ import Experience from "./Experience";
 
 const Project = ({ project, date, image, skills, description, url, repo }) => {
     return (
-        <Grid padded><Grid.Row>
+        <Grid padded columns={2} stackable><Grid.Row>
             <Grid.Column width={7} stretched >
-                <Image src={`/images/projects/${image}.png`} />
+                <Image src={`images/projects/${image}.png`} />
             </Grid.Column>
             <Grid.Column width={9} stretched>
                 <Experience

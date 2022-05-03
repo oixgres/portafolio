@@ -41,7 +41,7 @@
         "section": [
             {
                 "title": "For Big Data",
-                "images": ["Spark","Kafka","selenium"]
+                "images": ["spark","kafka","selenium"]
             },
             {
                 "title": "For Web Development",

@@ -19,7 +19,7 @@ const InteractiveImage=({index,activeIndex,sectionIndex,image,folder}) => {
         >
             <motion.div whileHover={{scale:1.2}}>
                 <Popup
-                    trigger={<Image src={`/images/${folder}/${image}.png`}/>}
+                    trigger={<Image src={`images/${folder}/${image}.png`}/>}
                     position='top down'
                     style={{opacity:0.5}}
                     inverted

@@ -16,6 +16,7 @@ const Skill = ({title, index, delay, animateX, activeIndex, setactiveIndex, chil
             transition={{delay: index*delay}}
             initial={{visibility: 'hidden', opacity: 0}}
             animate={{x:animateX, visibility: "visible", opacity: 1}}
+            style={{listStyleType: " "}}
         >
             <Segment inverted padded>
                 <Accordion inverted>

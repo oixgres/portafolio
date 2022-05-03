@@ -8,7 +8,7 @@ const About = () => {
     return (
         <div>
             <Navbar location={'about'}/>
-            <Grid padded>
+            <Grid padded stackable columns={2}>
                 <Grid.Row>
                     <Grid.Column width={10} >
                         <NormalCard

@@ -25,19 +25,19 @@ const item = {
 };
 const Presentation = () => {
     return (
-        <Grid columns={2} stackable doubling padded>
+        <Grid columns={2} stackable padded>
             <Grid.Row>
                 <Grid.Column>
                     <Header
                         name='Sergio Enrique'
-                        size='7rem'
+                        size='6rem'
                         color='#fff'
                         position='left '
                         padding='0 0.1rem 0 0.1rem'
                     />
                     <Header
                         name='Guerra Cervantes'
-                        size='7em'
+                        size='6em'
                         color={'#fff'}
                         position='left '
                         padding='0 0.1rem 0 0.1rem'                        
@@ -60,7 +60,7 @@ const Presentation = () => {
                             <motion.img
                                 key={index}
                                 variants={item}
-                                src={`/images/main-icons/${logo}.png`}
+                                src={`images/main-icons/${logo}.png`}
                                 width='100%'                            
                             />
                         ))}
