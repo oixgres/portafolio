@@ -2,7 +2,7 @@
     {
         "name": "ESCANER DE INTERACCIONES",
         "date":"January 2021 - July 2021",
-        "description":"Design, develop and maintain a data extractor for social media groups. Design, develop and maintain the database. The information that the scanner can extract is posts, views, names, comments, responses, reactions and people who shared the post",
+        "description":"Worked on the design, development and maintainance of the data extractor for social media groups.  Escáner de interacciones para redes sociales extracts all the intectactions of users in social media groups and stores the data on a DB in order to be used in the future with AI.",
         "skills":[
             "python",
             "selenium",
@@ -16,7 +16,7 @@
     {
         "name": "HCARBONO",
         "date": "February 2021 - August 2021",
-        "description":"Design, develop and maintain a client-server system focused on the collection of statistics about gas emissions. I worked in front-end and back-end",
+        "description":"Worked on the design, development and maintainance of a client-server system focused on the collection of statistics about gas emissions.",
         "skills":[
             "html",
             "css",
