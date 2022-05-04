@@ -31,7 +31,7 @@
             },
             {
                 "title": "For Data Base Management",
-                "images": ["mysql","postgres"]
+                "images": ["mysql","postgres, mongodb"]
             },
             {
                 "title": "Data Serializers",
