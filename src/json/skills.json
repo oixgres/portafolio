@@ -23,7 +23,7 @@
             },
             {
                 "title": "For Applications",
-                "images": ["c","cpp","cs", "go", "prolog"]   
+                "images": ["c","cpp","cs", "prolog", "go"]   
             },
             {
                 "title": "For Web Development",
@@ -35,7 +35,7 @@
             },
             {
                 "title": "Data Serializers",
-                "images": ["json","xml", "yaml"]
+                "images": ["json","xml", "yml"]
             }
         ]
     },
