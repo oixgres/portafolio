@@ -5,14 +5,25 @@ import Project from "../components/Project";
 
 import { motion } from "framer-motion";
 
+import  Carousel  from  'semantic-ui-carousel-react';
+
 import jobs from "../json/jobs.json";
 import projects from "../json/projects.json";
+import { JobCard } from "../components/collections/Cards";
 
 const Work = () => {
+    const animation = {
+        'initial':{ opacity: 0, y: 100 },
+        'whileInView':{ opacity: 1, y: 0, transition: { duration: 0.5} },
+        'viewport':{ once: true }
+    }
+
+
     return(
         <div>
             <Navbar location={'work'}/>
-            {/* Jobs */}
+            
+            {/* ***** JOBS ***** */}
             <Header
                 name={`Job Experience`}
                 size='4em'
@@ -21,22 +32,13 @@ const Work = () => {
                 padding='0 0.25em 0 0.25em'
             />
             {jobs.map((job) => (
-                <motion.div
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5} }}
-                viewport={{ once: true }}
-                >
-                    <Job
-                        job={job.name}
-                        workplace={job.workplace}
-                        date={job.date}
-                        image={job.image}
-                        skills={job.skills}
-                        description={job.description}
-                    />
-                </motion.div>
+                <JobCard
+                    json_data={job}
+                    json_motion={animation}
+                />
             ))}
-            {/* PROJECTS */}
+
+            {/* ***** PROJECTS ***** */}
             <Header
                 name={`Projects`}
                 size='4em'
@@ -46,9 +48,9 @@ const Work = () => {
             />
             {projects.map((project) => (
                 <motion.div
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5} }}
-                viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5} }}
+                    viewport={{ once: true }}
                 >
                     <Project
                         project={project.name}
@@ -62,6 +64,16 @@ const Work = () => {
                     />
                 </motion.div>
             ))}
+
+            {/* ***** CERTIFICATIONS ***** */}
+            <Header
+                name={`Certifications`}
+                size='4em'
+                color={'#fff'}
+                position='left'
+                padding='0 0.25em 0 0.25em'
+            />
+
         </div>
     );
 }

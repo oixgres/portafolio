@@ -1,6 +1,7 @@
 import { Header, Segment, Image, Grid } from "semantic-ui-react"
 import { motion } from "framer-motion";
 import './Cards.css'
+import Job from "../Job";
 
 const NormalCard = props => {
     const {title, description, animation, delay} = props;
@@ -32,14 +33,37 @@ const ProfileCard = props => {
     )
 }
 
+const JobCard = ({json_data,json_motion}) => {
+    return(
+        <motion.div 
+            initial={json_motion.initial}
+            whileInView={json_motion.whileInView}
+            viewport={json_motion.viewport}
+        >
+            <Job
+                job={json_data.name}
+                workplace={json_data.workplace}
+                date={json_data.date}
+                image={json_data.image}
+                skills={json_data.skills}
+                description={json_data.description}
+            >
+            </Job>
+        </motion.div>
+    )
+}
+
+// const Pr
+
+
 const NormalCardCollection = props => {
-    const {json, animation} = props;
+    const {json_data, animation} = props;
 
     return(
         <motion.li animate={animation}>
-            <Grid columns={json.length} stackable>
+            <Grid columns={json_data.length} stackable>
                 <Grid.Row >
-                {json.map((j, index) =>
+                {json_data.map((j, index) =>
                     <Grid.Column stretched  >
                         <NormalCard
                             title={j.title}
@@ -53,7 +77,8 @@ const NormalCardCollection = props => {
             </Grid>
         </motion.li>
     )
-
 }
 
-export  {NormalCard, ProfileCard,NormalCardCollection};
+
+
+export  {NormalCard, ProfileCard,NormalCardCollection,JobCard};

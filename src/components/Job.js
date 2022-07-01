@@ -1,7 +1,9 @@
 import { Grid, Image} from "semantic-ui-react";
 import Experience from "./Experience";
 
-const Job = ({job, workplace,date,image,skills,description}) =>{
+const Job = props => {
+    const {job, workplace, date, image, skills, description} = props;
+
     return(
         <Grid padded stackable columns={2}><Grid.Row>
             <Grid.Column width={9} stretched>
@@ -12,10 +14,10 @@ const Job = ({job, workplace,date,image,skills,description}) =>{
                     skills={skills}
                     description={description}
                 />
-            </Grid.Column>
+                </Grid.Column>
             <Grid.Column width={7}>
                 <Image src={`images/jobs/${image}.png`}/>
-            </Grid.Column>
+                </Grid.Column>
         </Grid.Row></Grid>
     )
 }
