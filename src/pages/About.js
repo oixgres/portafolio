@@ -17,7 +17,7 @@ const About = () => {
                             animation={{x:[-100,0], y:[0,0], opacity:[0,1]}}
                         />
                         <NormalCardCollection
-                            json={about.facts}
+                            json_data={about.facts}
                             animation={{x:[0,0], y:[100,0], opacity:[0,1]}}
                         />
                     </Grid.Column>

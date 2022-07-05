@@ -53,9 +53,6 @@ const JobCard = ({json_data,json_motion}) => {
     )
 }
 
-// const Pr
-
-
 const NormalCardCollection = props => {
     const {json_data, animation} = props;
 

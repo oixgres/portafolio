@@ -5,11 +5,12 @@ import Project from "../components/Project";
 
 import { motion } from "framer-motion";
 
-import  Carousel  from  'semantic-ui-carousel-react';
+// import  Carousel  from  'semantic-ui-carousel-react';
 
 import jobs from "../json/jobs.json";
 import projects from "../json/projects.json";
 import { JobCard } from "../components/collections/Cards";
+import Certifications from "../components/Certifications";
 
 const Work = () => {
     const animation = {
@@ -73,6 +74,7 @@ const Work = () => {
                 position='left'
                 padding='0 0.25em 0 0.25em'
             />
+            <Certifications></Certifications>
 
         </div>
     );
