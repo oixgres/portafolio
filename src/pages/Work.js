@@ -2,15 +2,16 @@ import Job from "../components/Job";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Project from "../components/Project";
+import { JobCard } from "../components/collections/Cards";
+import Certification from "../components/Certification";
 
 import { motion } from "framer-motion";
 
-// import  Carousel  from  'semantic-ui-carousel-react';
-
 import jobs from "../json/jobs.json";
 import projects from "../json/projects.json";
-import { JobCard } from "../components/collections/Cards";
-import Certifications from "../components/Certifications";
+import certifications from "../json/certifications.json";
+import { Grid } from "semantic-ui-react";
+
 
 const Work = () => {
     const animation = {
@@ -74,8 +75,18 @@ const Work = () => {
                 position='left'
                 padding='0 0.25em 0 0.25em'
             />
-            <Certifications></Certifications>
 
+            <Grid padded stackable columns={3} centered>
+            {certifications.map((certification) => (
+                <Grid.Column width={5}>
+
+                <Certification
+                    title={certification.title}
+                    image={certification.image}
+                    />
+                    </Grid.Column>
+            ))}
+            </Grid>
         </div>
     );
 }

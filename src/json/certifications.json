@@ -1,0 +1,26 @@
+[
+    {
+        "title": "AWS Certified Cloud Practitioner",
+        "image": "cloud-practitioner"
+    },
+    {
+        "title": "AWS Certified Developer Associate",
+        "image": "certified-developer"
+    },
+    {
+        "title": "Kibana",
+        "image": "kibana"
+    },
+    {
+        "title": "Scala",
+        "image": "scala"
+    },
+    {
+        "title": "Scala & Spark",
+        "image": "spark"
+    },
+    {
+        "title": "Regex",
+        "image": "regex"
+    }
+]

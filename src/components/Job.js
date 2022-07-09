@@ -13,7 +13,7 @@ const Job = props => {
                     date={date}
                     skills={skills}
                     description={description}
-                />
+                />5
                 </Grid.Column>
             <Grid.Column width={7}>
                 <Image src={`images/jobs/${image}.png`}/>
