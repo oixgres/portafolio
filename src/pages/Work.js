@@ -2,17 +2,30 @@ import Job from "../components/Job";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Project from "../components/Project";
+import { JobCard } from "../components/collections/Cards";
+import Certification from "../components/Certification";
 
 import { motion } from "framer-motion";
 
 import jobs from "../json/jobs.json";
 import projects from "../json/projects.json";
+import certifications from "../json/certifications.json";
+import { Grid, Segment } from "semantic-ui-react";
+
 
 const Work = () => {
+    const animation = {
+        'initial':{ opacity: 0, y: 100 },
+        'whileInView':{ opacity: 1, y: 0, transition: { duration: 0.5} },
+        'viewport':{ once: true }
+    }
+
+
     return(
         <div>
             <Navbar location={'work'}/>
-            {/* Jobs */}
+            
+            {/* ***** JOBS ***** */}
             <Header
                 name={`Job Experience`}
                 size='4em'
@@ -21,22 +34,13 @@ const Work = () => {
                 padding='0 0.25em 0 0.25em'
             />
             {jobs.map((job) => (
-                <motion.div
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5} }}
-                viewport={{ once: true }}
-                >
-                    <Job
-                        job={job.name}
-                        workplace={job.workplace}
-                        date={job.date}
-                        image={job.image}
-                        skills={job.skills}
-                        description={job.description}
-                    />
-                </motion.div>
+                <JobCard
+                    json_data={job}
+                    json_motion={animation}
+                />
             ))}
-            {/* PROJECTS */}
+
+            {/* ***** PROJECTS ***** */}
             <Header
                 name={`Projects`}
                 size='4em'
@@ -46,9 +50,9 @@ const Work = () => {
             />
             {projects.map((project) => (
                 <motion.div
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5} }}
-                viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5} }}
+                    viewport={{ once: true }}
                 >
                     <Project
                         project={project.name}
@@ -62,6 +66,27 @@ const Work = () => {
                     />
                 </motion.div>
             ))}
+
+            {/* ***** CERTIFICATIONS ***** */}
+            <Header
+                name={`Certifications`}
+                size='4em'
+                color={'#fff'}
+                position='left'
+                padding='0 0.25em 0 0.25em'
+            />
+            <Segment inverted padded textAlign="center">
+                <Grid padded stackable columns={3} centered>
+                    {certifications.map((certification) => (
+                        <Grid.Column width={5}>
+                        <Certification
+                            title={certification.title}
+                            image={certification.image}
+                            />
+                        </Grid.Column>
+                    ))}
+                </Grid>
+            </Segment>
         </div>
     );
 }

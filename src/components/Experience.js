@@ -26,9 +26,9 @@ const Experience = props => {
                 }
             </h1>
             <Divider/>
-            <h2 style={{color:'gray'}}>{workplace}
+            <h1 style={{color:'gray'}}>{workplace}
             <h2 className="exp-date">{date}
-            </h2></h2>
+            </h2></h1>
 
             <p style={{"fontSize":"1.4em", "textAlign":"justify"}}>
                 {description}
@@ -38,7 +38,7 @@ const Experience = props => {
                 {skills.map(
                     skill=>
                     <p style={{"fontSize":"1.4em"}}>
-                        <l style={{color:getRandomColor()}}> &#9632; </l> 
+                        <a style={{color:getRandomColor()}}> &#9632; </a> 
                         {skill} &emsp;
                     </p>
                 )}

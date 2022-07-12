@@ -1,0 +1,46 @@
+[
+    {
+        "title": "AWS Certified Cloud Practitioner Certificate",
+        "image": "aws-cloud-practitioner"
+    },
+    {
+        "title": "AWS Certified Cloud Practitioner Course",
+        "image": "cloud-practitioner"
+    },
+    {
+        "title": "AWS Certified Developer Associate",
+        "image": "certified-developer"
+    },
+    {
+        "title": "Kibana",
+        "image": "kibana"
+    },
+    {
+        "title": "Scala",
+        "image": "scala"
+    },
+    {
+        "title": "Scala & Spark",
+        "image": "spark"
+    },
+    {
+        "title": "Regex",
+        "image": "regex"
+    },
+    {
+        "title": "Problem Solving Basic",
+        "image": "problem-solving"
+    },
+    {
+        "title": "Problem Solving Intermediate",
+        "image": "problem-solving-intermediate"
+    },
+    {
+        "title": "Python",
+        "image": "python"
+    },
+    {
+        "title": "SQL",
+        "image": "sql"
+    }
+]
