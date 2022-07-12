@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import jobs from "../json/jobs.json";
 import projects from "../json/projects.json";
 import certifications from "../json/certifications.json";
-import { Grid } from "semantic-ui-react";
+import { Grid, Segment } from "semantic-ui-react";
 
 
 const Work = () => {
@@ -75,17 +75,18 @@ const Work = () => {
                 position='left'
                 padding='0 0.25em 0 0.25em'
             />
-
-            <Grid padded stackable columns={3} centered>
-                {certifications.map((certification) => (
-                <Grid.Column width={5}>
-                    <Certification
-                        title={certification.title}
-                        image={certification.image}
-                    />
-                    </Grid.Column>
-                ))}
-            </Grid>
+            <Segment inverted padded textAlign="center">
+                <Grid padded stackable columns={3} centered>
+                    {certifications.map((certification) => (
+                        <Grid.Column width={5}>
+                        <Certification
+                            title={certification.title}
+                            image={certification.image}
+                            />
+                        </Grid.Column>
+                    ))}
+                </Grid>
+            </Segment>
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import { Grid } from 'semantic-ui-react';
-import InteractiveImage from './InteractiveImage';
+import {InteractiveImage} from './collections/InteractiveImage';
 
 const DisplaySkill = ({folder, images, sectionIndex, activeIndex }) => {    
     return(

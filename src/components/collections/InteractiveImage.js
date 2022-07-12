@@ -20,7 +20,7 @@ const InteractiveImage=({index,activeIndex,sectionIndex,image,folder}) => {
             <motion.div whileHover={{scale:1.2}}>
                 <Popup
                     trigger={<Image src={`images/${folder}/${image}.png`}/>}
-                    position='top down'
+                    position='bottom center'
                     style={{opacity:0.5}}
                     inverted
                 >
@@ -32,4 +32,15 @@ const InteractiveImage=({index,activeIndex,sectionIndex,image,folder}) => {
 
 }
 
-export default InteractiveImage;
+//Just Zoom-in animation
+const ZoomInImage = (props) =>{
+    const {image,folder} = props;
+
+    return(
+        <motion.div whileHover={{scale:1.2}}>
+            <Image src={`images/${folder}/${image}.jpg`}/>
+        </motion.div>
+    )
+}
+
+export {InteractiveImage, ZoomInImage};
