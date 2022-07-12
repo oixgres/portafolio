@@ -1,6 +1,10 @@
 [
     {
-        "title": "AWS Certified Cloud Practitioner",
+        "title": "AWS Certified Cloud Practitioner Certificate",
+        "image": "aws-cloud-practitioner"
+    },
+    {
+        "title": "AWS Certified Cloud Practitioner Course",
         "image": "cloud-practitioner"
     },
     {
@@ -22,5 +26,21 @@
     {
         "title": "Regex",
         "image": "regex"
+    },
+    {
+        "title": "Problem Solving Basic",
+        "image": "problem-solving"
+    },
+    {
+        "title": "Problem Solving Intermediate",
+        "image": "problem-solving-intermediate"
+    },
+    {
+        "title": "Python",
+        "image": "python"
+    },
+    {
+        "title": "SQL",
+        "image": "sql"
     }
 ]

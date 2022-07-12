@@ -77,15 +77,14 @@ const Work = () => {
             />
 
             <Grid padded stackable columns={3} centered>
-            {certifications.map((certification) => (
+                {certifications.map((certification) => (
                 <Grid.Column width={5}>
-
-                <Certification
-                    title={certification.title}
-                    image={certification.image}
+                    <Certification
+                        title={certification.title}
+                        image={certification.image}
                     />
                     </Grid.Column>
-            ))}
+                ))}
             </Grid>
         </div>
     );
