@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Portfolio CloudFormation Template for the required resources'
+
+Resources:
+  PortfolioTimeseriesDB:
+    Type: AWS::Timestream::Database
+    Properties:
+      DatabaseName: PortfolioTimeseriesDB
+      Tags:
+        - Key: Project
+          Value: Portfolio
+  
+  PortfolioTimeseriesTable:
+    Type: AWS::Timestream::Table
+    Properties:
+      DatabaseName: !Ref PortfolioTimeseriesDB
+      TableName: VisitsLogs
+      MagneticStoreWriteProperties:
+        EnableMagneticStoreWrites: true
+      RetentionProperties:
+        MemoryStoreRetentionPeriodInHours: 24
+        MagneticStoreRetentionPeriodInDays: 365
+      Tags:
+        - Key: Project
+          Value: Portfolio
+    
