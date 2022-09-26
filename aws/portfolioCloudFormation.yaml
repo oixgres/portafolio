@@ -1,26 +1,53 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'Portfolio CloudFormation Template for the required resources'
 
+Parameters:
+  DBName:
+    Description: 'Name of the database'
+    Type: String
+    Default: 'portfolioDB'
+
+  DBUsername:
+    NoEcho: true
+    Description: 'Portfolio DB Username'
+    Type: String
+
+  DBPassword:
+    NoEcho: true
+    Description: 'Portfolio DB Password'
+    Type: String
+
 Resources:
-  PortfolioTimeseriesDB:
-    Type: AWS::Timestream::Database
+  PortfolioDBEC2SG:
+    Type: AWS::EC2::SecurityGroup
     Properties:
-      DatabaseName: PortfolioTimeseriesDB
-      Tags:
-        - Key: Project
-          Value: Portfolio
-  
-  PortfolioTimeseriesTable:
-    Type: AWS::Timestream::Table
+      GroupDescription: 'Security Group for PortfolioDB Webserver public access'
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 5432
+          ToPort: 5432
+          CidrIp: 0.0.0.0/0
+
+  PortfolioDB:
+    Type: AWS::RDS::DBInstance
     Properties:
-      DatabaseName: !Ref PortfolioTimeseriesDB
-      TableName: VisitsLogs
-      MagneticStoreWriteProperties:
-        EnableMagneticStoreWrites: true
-      RetentionProperties:
-        MemoryStoreRetentionPeriodInHours: 24
-        MagneticStoreRetentionPeriodInDays: 365
+      DBName: !Ref DBName
+      Engine: postgres
+      DBInstanceClass: db.t3.micro
+      AllocatedStorage: 20
+      MaxAllocatedStorage: 1000
+      MasterUsername: !Ref DBUsername
+      MasterUserPassword: !Ref DBPassword
+      PubliclyAccessible: true
+      VPCSecurityGroups:
+        - !GetAtt PortfolioDBEC2SG.GroupId
       Tags:
-        - Key: Project
-          Value: Portfolio
-    
+        - Key: name
+          Value: portfoliodb
+        - Key: project
+          Value: portfolio
+
+Outputs:
+  PortfolioDBEndpoint:
+    Description: 'Portfolio DB Endpoint'
+    Value: !GetAtt PortfolioDB.Endpoint.Address

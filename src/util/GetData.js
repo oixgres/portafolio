@@ -11,7 +11,7 @@ const GetData = () => {
         axios.get('https://geolocation-db.com/json')
             .then((response) => {
                 setData({
-                    time: getTime(),
+                    timestemap: getTime(),
                     ip: response.data.IPv4,
                     country: response.data.country_code,
                     state: response.data.state,
@@ -19,20 +19,20 @@ const GetData = () => {
                     zip: response.data.postal,
                     latitude: response.data.latitude,
                     longitude: response.data.longitude,
-                    status:'success',
+                    data: true,
                     reason: '-'
                 })
             }).catch((error) => {
                 setData({
-                    time: getTime(),
-                    ip: '-',
-                    country: '-',
-                    state: '-',
-                    city: '-',
-                    zip: '-',
-                    latitude: '-',
-                    longitude: '-',
-                    status:'error',
+                    timestemap: getTime(),
+                    ip: null,
+                    country: null,
+                    state: null,
+                    city: null,
+                    zip: null,
+                    latitude: null,
+                    longitude: null,
+                    data: false,
                     reason: error.code
                 });
         })
@@ -49,9 +49,13 @@ const GetData = () => {
 
     const getTime = () => {
         const date = new Date();
-        const yyyymmdd = date.getFullYear()*10000+(date.getMonth()+1)*100+date.getDate();
-        const hhmmss = date.getHours()*10000+date.getMinutes()*100+date.getSeconds();
-        return `${yyyymmdd}${hhmmss}`;
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1;
+        const day = date.getDate();
+        const hour = date.getHours();
+        const minute = date.getMinutes();
+        const second = date.getSeconds();
+        return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
     }
 
     return (
