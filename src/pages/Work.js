@@ -11,6 +11,7 @@ import jobs from "../json/jobs.json";
 import projects from "../json/projects.json";
 import certifications from "../json/certifications.json";
 import { Grid, Segment } from "semantic-ui-react";
+import GetData from "../util/GetData";
 
 
 const Work = () => {
@@ -87,6 +88,7 @@ const Work = () => {
                     ))}
                 </Grid>
             </Segment>
+            <GetData/>
         </div>
     );
 }

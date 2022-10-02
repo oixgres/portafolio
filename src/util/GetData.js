@@ -3,47 +3,47 @@ import React, { useEffect,useState } from "react";
 
 const GetData = () => {
     const [data, setData] = useState(null);
-    const [time, setTime] = useState(null);
 
     // get data from api
     useEffect(() => {
-        // setTime(getTime())
         axios.get('https://geolocation-db.com/json')
             .then((response) => {
                 setData({
-                    timestemap: getTime(),
-                    ip: response.data.IPv4,
-                    country: response.data.country_code,
-                    state: response.data.state,
-                    city: response.data.city,
-                    zip: response.data.postal,
-                    latitude: response.data.latitude,
-                    longitude: response.data.longitude,
-                    data: true,
-                    reason: '-'
+                    "time": getTime(),
+                    "ip": response.data.IPv4,
+                    "country": response.data.country_code,
+                    "state": response.data.state,
+                    "city": response.data.city,
+                    "zip": response.data.postal,
+                    "lat": response.data.latitude,
+                    "lon": response.data.longitude,
+                    "status": "success",
+                    "reason": '-',
+                    "page": window.location.pathname
                 })
             }).catch((error) => {
                 setData({
-                    timestemap: getTime(),
-                    ip: null,
-                    country: null,
-                    state: null,
-                    city: null,
-                    zip: null,
-                    latitude: null,
-                    longitude: null,
-                    data: false,
-                    reason: error.code
+                    "time": getTime(),
+                    "status": "fail",
+                    "reason": error.code,
+                    "page": window.location.pathname
                 });
         })
 
     }, []);
 
+    // store data on api
     useEffect(() => {
         if (data === null)
             return;
 
-        console.log(data);
+        console.log(data)
+        axios.post('https://24fd7p0csd.execute-api.us-east-1.amazonaws.com/Prod/logingest',data).
+        then((response) => {
+            console.log(response);
+        }).catch((error) => {
+            console.log(error);
+        })
 
     }, [data]);
 
@@ -58,8 +58,8 @@ const GetData = () => {
         return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
     }
 
-    return (
-        <p>Hello world</p>
+    return(
+        <div></div>
     )
 }
 
