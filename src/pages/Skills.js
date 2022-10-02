@@ -4,6 +4,7 @@ import Skill from "../components/Skill";
 import { useState } from "react";
 
 import displayItems  from "../json/skills.json";
+import GetData from "../util/GetData";
 
 const Skills = () => {
     const [activeIndex, setactiveIndex] = useState(-1);
@@ -33,6 +34,7 @@ const Skills = () => {
 
                 </Skill>
             ))}
+            <GetData/>
         </div>
     );
 }

@@ -3,6 +3,7 @@ import {NormalCard,ProfileCard,NormalCardCollection} from "../components/collect
 import Navbar from "../components/Navbar";
 
 import about from "../json/about.json";
+import GetData from "../util/GetData";
 
 const About = () => {
     return (
@@ -32,6 +33,7 @@ const About = () => {
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
+            <GetData/>
         </div>
     );
 }
