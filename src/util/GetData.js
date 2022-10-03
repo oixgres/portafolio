@@ -6,7 +6,7 @@ const GetData = () => {
 
     // get data from api
     useEffect(() => {
-        axios.get('https://geolocation-db.com/json')
+        axios.get('https://geolocation-db.com/json/')
             .then((response) => {
                 setData({
                     "time": getTime(),
@@ -37,8 +37,7 @@ const GetData = () => {
         if (data === null)
             return;
 
-        console.log(data)
-        axios.post('https://24fd7p0csd.execute-api.us-east-1.amazonaws.com/Prod/logingest',data).
+        axios.post('https://24fd7p0csd.execute-api.us-east-1.amazonaws.com/Prod/logingest/',data).
         then((response) => {
             console.log(response);
         }).catch((error) => {
