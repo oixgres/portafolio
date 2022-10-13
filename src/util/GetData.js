@@ -17,14 +17,12 @@ const GetData = () => {
                     "zip": response.data.postal,
                     "lat": response.data.latitude,
                     "lon": response.data.longitude,
-                    "status": "success",
                     "reason": '-',
                     "page": window.location.pathname
                 })
             }).catch((error) => {
                 setData({
                     "time": getTime(),
-                    "status": "fail",
                     "reason": error.code,
                     "page": window.location.pathname
                 });
